@@ -1,2 +1,3 @@
-# SPWA_ScanAndRespond
-SPWA to allow user to scan and respond to sticker via QR code.
+# anti_park_spwa
+**UNDER CONSTRUCTION**
+A minimalist AngularJS SPWA that demos HTTP requests to an API.

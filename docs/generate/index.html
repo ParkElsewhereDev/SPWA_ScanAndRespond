@@ -35,8 +35,9 @@
     </form></div>
     <!-- bound this list to the array containing stickers in data model -->
       <li ng-repeat="sticker in vm.stickers" >
-        <qrcode data="{{stickers.id}}"></qrcode>
-        <p>Name: {{stickers.id}}</p>
+        <!-- <qrcode data="{{sticker.id}}"></qrcode> -->
+        <qrcode error-correction-level="Low" size="200" data="{{sticker}}" download></qrcode>
+        <p>Name: {{sticker}}</p>
       </li>
     </ul>
     <!-- <p id="test"></p> -->

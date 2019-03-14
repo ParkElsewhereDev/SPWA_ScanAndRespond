@@ -54,10 +54,10 @@
             var y= "";
             y = x.elements[0].value;
             var z = parseInt(y);
-            var jsonpayload={"num_requested":z};
+            var jsonpayload={"number_stickers":z};
             
              //Use $http service to send get request to API and execute different functions depending on whether it is successful or not
-            $http.post(vm.endpoint + '/stickers',jsonpayload.then(
+            $http.post(vm.endpoint + '/stickers',JSON.stringify(jsonpayload)).then(
                 function success(response) {
                     while(vm.stickers.length>0) {
                         vm.stickers.pop();

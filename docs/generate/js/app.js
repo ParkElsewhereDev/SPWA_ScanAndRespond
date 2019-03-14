@@ -49,30 +49,39 @@
         };
 
         vm.postStickers = function () {
-            // Using an unauthenticated API here
-            var x = document.getElementById("form1");
-            var y= "";
-            y = x.elements[0].value;
-            var z = parseInt(y);
-            var jsonpayload={"reference":z};
+            var sticker_ids = [];
+
+            var form = document.getElementById("form1");
+           
+            var str_num_stickers = form.elements[0].value;
+            var num_stickers = parseInt(str_num_stickers);
+            var jsonpayload={
+                reference: "hardcoded reference"
+            }; 
             
+
              //Use $http service to send get request to API and execute different functions depending on whether it is successful or not
-            $http.post(vm.endpoint + '/stickers/', jsonpayload).then(
-                function success(response) {
-                    while(vm.stickers.length>0) {
-                        vm.stickers.pop();
+            for(var index = 0; index < num_stickers; index++){
+            
+                $http.post(vm.endpoint + '/stickers/', jsonpayload).then(
+                    function success(response) {
+
+                        sticker_ids.push(response.data.id);
+
+                        
+                        if(sticker_ids.length == num_stickers){
+                            //vm.stickers.concat(sticker_ids);
+                            vm.stickers = sticker_ids.concat(vm.stickers);
+                        }
+
+                        console.log("vm.stickers: ",vm.stickers.length)
+                        console.info(response);
+                    },
+                    function failure(err) {
+                        console.error(err);
                     }
-                    for (var i in response.data) {
-                        vm.stickers.push(response.data[i]);
-                    }
-                    //vm.stickers = response.data;
-                    console.log("vm.stickers: ",vm.stickers.length)
-                    console.info(response);
-                },
-                function failure(err) {
-                    console.error(err);
-                }
-            )
+                )
+            }
         };
 
         vm.init();

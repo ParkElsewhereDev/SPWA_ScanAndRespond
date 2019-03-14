@@ -29,7 +29,7 @@
       <p>Please enter the number of stickers you would like to generate and download.</p>
       <p>Number of Stickers:</p>
     <form id="form1">
-      <input type="number" name="reference" value="1">
+      <input type="number" name="reference" value="1" max="10" min="0" >
         <!-- binding button click to getData() function in data model -->
       <button ng-click="vm.postStickers()">Generate Stickers</button> <!--POST-->
     </form></div>

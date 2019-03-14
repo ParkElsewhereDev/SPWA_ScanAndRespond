@@ -19,7 +19,7 @@
 
   <!-- 'ng-app' - angular module binding -->
   <!-- 'ng-controller' - angular controller binding -->
-  <body ng-app="anti_park_spwa" ng-controller="Main as vm">
+  <body ng-app="parkelsewhere_spwa" ng-controller="Main as vm">
 
 
     <h1>Show You Care Park Elsewhere</h1>
@@ -35,8 +35,8 @@
     </form></div>
     <!-- bound this list to the array containing stickers in data model -->
       <li ng-repeat="sticker in vm.stickers" >
-        <qrcode data="{{sticker.id}}"></qrcode>
-        <p>Name: {{sticker.id}}</p>
+        <qrcode data="{{stickers.id}}"></qrcode>
+        <p>Name: {{stickers.id}}</p>
       </li>
     </ul>
     <!-- <p id="test"></p> -->

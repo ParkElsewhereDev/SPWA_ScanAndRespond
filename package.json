@@ -1,5 +1,5 @@
 {
-  "name": "anti_parking_spwa",
+  "name": "parkelsehwere_spwa",
   "version": "1.0.0",
   "description": "Single Page Web application that connects to the anti_parking API",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TheAntiParkingCompany/SPWA.git"
+    "url": "git+https://github.com/ParkElsewhereDev/SPWA_ScanAndRespond.git"
   },
   "keywords": [
     "SPWA",
@@ -26,7 +26,7 @@
   "bugs": {
     "url": "https://github.com/TheAntiParkingCompany/SPWA/issues"
   },
-  "homepage": "https://github.com/TheAntiParkingCompany/SPWA.git#readme",
+  "homepage": "https://github.com/ParkElsewhereDev/SPWA_ScanAndRespond#readme",
   "dependencies": {
     "express": "^4.16.4"
   }

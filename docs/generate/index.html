@@ -36,7 +36,7 @@
     <!-- bound this list to the array containing stickers in data model -->
       <li ng-repeat="sticker in vm.stickers" >
         <!-- <qrcode data="{{sticker.id}}"></qrcode> -->
-        <qrcode error-correction-level="Low" size="200" data="https://parkelsewheredev.github.io/SPWA_ScanAndRespond/docs/response/index.html{{sticker}}" download></qrcode>
+        <qrcode error-correction-level="Low" size="200" data="https://parkelsewheredev.github.io/SPWA_ScanAndRespond/docs/response/index.html?uuid={{sticker}}" download></qrcode>
         <p>Name: {{sticker}}</p>
         <p>URL:https://parkelsewheredev.github.io/SPWA_ScanAndRespond/docs/response/index.html</p>
       </li>

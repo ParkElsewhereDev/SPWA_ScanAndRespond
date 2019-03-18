@@ -91,14 +91,11 @@
             
             var responsejson={"apologised":true, "sticker_uuid":uuid,"apologyRec":true, "apologyPN":1};
             //Use $http service to send get request to API and execute different functions depending on whether it is successful or not
-            $http.post(vm.endpoint + '/messages',JSON.stringify(responsejson)).then(
+            $http.post(vm.endpoint + '/responses',JSON.stringify(responsejson)).then(
                 function success(response) 
                 {
-                    //vm.responses = response.data;
+                    vm.responses = response.data;
                     console.info(response);
-
-                    vm.responses = response.data = uuid;
-
                 },
                 function failure(err) 
                 {

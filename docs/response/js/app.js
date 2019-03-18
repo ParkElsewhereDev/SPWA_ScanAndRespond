@@ -94,10 +94,10 @@
             $http.post(vm.endpoint + '/messages',JSON.stringify(responsejson)).then(
                 function success(response) 
                 {
-                    vm.responses = response.data;
+                    //vm.responses = response.data;
                     console.info(response);
 
-                    recipient_id = uuid;
+                    vm.responses = response.data = uuid;
 
                 },
                 function failure(err) 

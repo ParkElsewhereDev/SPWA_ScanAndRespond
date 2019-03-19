@@ -66,7 +66,7 @@
                 $http.post(vm.endpoint + '/stickers/', jsonpayload).then(
                     function success(response) {
 
-                        sticker_ids.push(response.data.id);
+                        sticker_ids.push(response.data.url);
 
                         
                         if(sticker_ids.length == num_stickers){

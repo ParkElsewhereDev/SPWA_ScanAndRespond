@@ -56,7 +56,7 @@
             var str_num_stickers = form.elements[0].value;
             var num_stickers = parseInt(str_num_stickers);
             var jsonpayload={
-                reference: "hardcoded reference"
+                reference: "Alice"
             }; 
             
 

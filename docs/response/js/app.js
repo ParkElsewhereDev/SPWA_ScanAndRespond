@@ -74,17 +74,17 @@
                 }
             )
         }; */
+
+        
+
+
         vm.apologise=function()
         {
             /* var urlstring=window.location.href;
             var url= new url(urlstring);
             var uuid= url.searchParams.get("uuid");*/
             
-            
-            
             var z= true; 
-            
-            
 
             var urlParams = new URLSearchParams(window.location.search);
             var uuid=urlParams.get('uuid'); //getus uuid from url
@@ -115,8 +115,6 @@
 
             var z= true; 
             
-            
-
             var urlParams = new URLSearchParams(window.location.search);
             var uuid=urlParams.get('uuid'); //getus uuid from url
             

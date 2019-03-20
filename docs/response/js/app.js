@@ -75,10 +75,17 @@
             )
         }; */
 
-        
+        vm.apologise = function () {
+            vm.apologyMessage = "Sorry";
+            vm.apologyPOSTRequest();
+        }
 
+        vm.refuse = function () {
+            vm.apologyMessage = "Not Sorry!";
+            vm.apologyPOSTRequest();
+        }
 
-        vm.apologise=function(msg)
+        vm.apologyPOSTRequest=function()
         {
             /* var urlstring=window.location.href;
             var url= new url(urlstring);
@@ -91,7 +98,7 @@
             var uuid=urlParams.get('uuid'); //getus uuid from url
 
             var payload = {
-                message: msg
+                message: vm.apologyMessage
             };
 
             var pushParams = {

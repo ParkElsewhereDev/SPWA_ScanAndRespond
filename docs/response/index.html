@@ -30,8 +30,8 @@
     <form id="form1">
       <!-- <input type="number" name="numStickers" value="1"> -->
         <!-- binding button click to getData() function in data model -->
-      <button ng-click="vm.apologise()">Yes! I'm really sorry!</button> <!--POST-->
-      <button ng-click="vm.refuse()">No, I don't think so!</button> <!--POST-->
+      <button ng-click="vm.apologise('Sorry')">Yes! I'm really sorry!</button> <!--POST-->
+      <button ng-click="vm.apologise('Not Sorry')">No, I don't think so!</button> <!--POST-->
     </form></div>
     <!-- bound this list to the array containing stickers in data model -->
       <!-- <li ng-repeat="sticker in vm.stickers" >

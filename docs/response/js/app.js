@@ -122,14 +122,20 @@
         vm.refuse=function()//should change apologyRec to true; change apologyPN to -1
         {
 
-            var z= true; 
-            
             var urlParams = new URLSearchParams(window.location.search);
+            var pushDomain = urlParams.get("push");
+            var pushURL = "https://"+pushDomain+"/messages";
             var uuid=urlParams.get('uuid'); //getus uuid from url
-            
-            var responsejson={"apologised":true, "sticker_uuid":uuid, "apologyRec":true, "apologyPN":-1};
+            var pushParams = {
+                "recipient_id":"/topics/"+uuid,
+                "sender_id": "",
+                "message_id": "",
+                "message_type": 0,
+                "sender_role": 0,
+                "payload": "{\"any-old-data\":\"any-any-any-old-data\"}"
+              }
             //Use $http service to send get request to API and execute different functions depending on whether it is successful or not
-            $http.post(vm.endpoint + 'responses/',JSON.stringify(responsejson)).then(
+            $http.post(pushURL, pushParams).then(
                 function success(response) {
                     vm.responses = response.data;
                     console.info(response);
